@@ -1,4 +1,4 @@
-import styles from './StartScreen.module.css';
+import styles from "./StartScreen.module.css";
 
 export default function StartScreen({ onPlay }) {
   return (
@@ -6,17 +6,12 @@ export default function StartScreen({ onPlay }) {
       <div className={styles.content}>
         <div className={styles.badge}>UC IRVINE</div>
         <h1 className={styles.title}>
-          UCI <span className={styles.titleAccent}>GeoGuesser</span>
+          UC Irvine{" "}
+          <span className={styles.titleAccent}>Guess The Location</span>
         </h1>
-        <p className={styles.subtitle}>
-          Can you navigate the Anteater campus by sight?
-        </p>
+        <p className={styles.subtitle}>Are you a real Anteater?</p>
 
         <div className={styles.featureList}>
-          <div className={styles.feature}>
-            <span className={styles.featureIcon}>🗺️</span>
-            <span>Explore 30+ real UCI locations</span>
-          </div>
           <div className={styles.feature}>
             <span className={styles.featureIcon}>📍</span>
             <span>Drop a pin on the mini-map to guess</span>
@@ -27,12 +22,15 @@ export default function StartScreen({ onPlay }) {
           </div>
         </div>
 
-        <button className={`btn btn-primary ${styles.playBtn}`} onClick={onPlay}>
+        <button
+          className={`btn btn-primary ${styles.playBtn}`}
+          onClick={onPlay}
+        >
           Play Now
         </button>
 
         <p className={styles.hint}>
-          5 rounds · 25,000 points max · From Aldrich Park to Turtle Rock
+          5 rounds · 25,000 points max · Who will win??
         </p>
       </div>
 
