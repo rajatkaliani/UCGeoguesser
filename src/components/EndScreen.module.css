@@ -1,0 +1,198 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 65% 5%, rgba(255,210,0,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 25% 90%, rgba(59,130,246,0.07) 0%, transparent 50%),
+    linear-gradient(160deg, #080d1a 0%, #0d1526 55%, #111827 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 500px;
+  padding: 36px 20px;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Header ────────────────────────────── */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding-bottom: 4px;
+}
+
+.stars {
+  display: flex;
+  gap: 6px;
+}
+
+.star {
+  font-size: 1.8rem;
+  transition: color 0.4s ease;
+  filter: drop-shadow(0 0 6px rgba(255,210,0,0.4));
+}
+
+.totalScore {
+  font-size: clamp(3.5rem, 12vw, 5rem);
+  font-weight: 900;
+  color: var(--uci-gold);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.maxScore {
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+}
+
+.rankBadge {
+  color: #080d1a;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 7px 20px;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ── Round Breakdown ──────────────────── */
+
+.breakdown {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.breakdownTitle {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.roundList {
+  display: flex;
+  flex-direction: column;
+}
+
+.roundRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.roundRow:last-child {
+  border-bottom: none;
+}
+
+.roundRow:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+.roundNum {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: rgba(255, 210, 0, 0.1);
+  border: 1px solid rgba(255, 210, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+  color: var(--uci-gold);
+}
+
+.roundInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.roundName {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-primary);
+}
+
+.roundDist {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.2px;
+}
+
+.roundScoreWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+  min-width: 70px;
+}
+
+.roundScoreBar {
+  height: 3px;
+  background: var(--uci-gold);
+  border-radius: 50px;
+  min-width: 4px;
+  opacity: 0.7;
+}
+
+.roundScore {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* ── Play Again ────────────────────────── */
+
+.playAgainBtn {
+  width: 100%;
+  font-size: 16px !important;
+  padding: 16px !important;
+}
+
+/* Grid decoration */
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+  pointer-events: none;
+}

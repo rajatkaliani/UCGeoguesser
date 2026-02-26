@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UCI GeoGuesser</title>
+    <script>
+      window.googleMapsReady = false;
+      window.initMap = function () {
+        window.googleMapsReady = true;
+        window.dispatchEvent(new Event('google-maps-ready'));
+      };
+    </script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzCnNSysIKAdinxAdCFhAzfa_35bkTyxk&libraries=geometry&callback=initMap"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

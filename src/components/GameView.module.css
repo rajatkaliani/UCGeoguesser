@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.streetView {
+  width: 100%;
+  height: 100%;
+}
+
+.roundBadge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(8, 13, 26, 0.75);
+  color: var(--uci-gold);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 9px 18px;
+  border-radius: 50px;
+  border: 1px solid var(--border-gold);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  pointer-events: none;
+  z-index: 10;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-sm);
+}
